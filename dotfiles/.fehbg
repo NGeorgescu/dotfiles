@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --bg-fill '/home/nsg/.config/wall_debian.jpg' 
