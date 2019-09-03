@@ -193,7 +193,7 @@ bindsym $mod+Shift+m exec $term -e nmtui
 bindsym $mod+b exec $term -e ncmpcpp
 bindsym $mod+n exec nautilus
 bindsym $mod+Shift+n exec $term -e vifm
-bindsym $mod+g exec geary
+bindsym $mod+g exec mailspring
 bindsym $mod+Shift+g exec slack
 bindsym $mod+[ exec $term -e top
 bindsym $mod+p exec rhythmbox
