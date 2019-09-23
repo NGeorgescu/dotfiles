@@ -113,7 +113,7 @@ if ! shopt -oq posix; then
 fi
 
 
-
+[[-r "~/.scripts/i3cmds/z.sh"]] && source ~/.scripts/i3cmds/z.sh
 
 #base
 alias todo="vim ~/Dropbox/todo.txt; clear; cat ~/Dropbox/todo.txt"
