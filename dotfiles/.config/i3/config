@@ -203,7 +203,8 @@ bindsym $mod+s exec dmenuunicode
 bindsym $mod+Shift+s exec gnome-characters
 bindsym $mod+c exec virtualbox
 bindsym $mod+Shift+c exec $term -e octave\ -q
-bindsym $mod+t exec $term -e vim\ ~/Dropbox/todo.txt
+bindsym $mod+t exec chromium --profile-directory=Default --app-id=bgjohebimpjdhhocbknplfelpmdhifhd
+
 
 
 # startup
