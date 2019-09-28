@@ -118,7 +118,6 @@ fi
 #base
 alias todo="vim ~/Dropbox/todo.txt; clear; cat ~/Dropbox/todo.txt"
 alias Syu="sudo bash -c \"apt-get update && apt-get upgrade && apt-get autoremove && apt-get autoclean\""
-alias VPN="sudo openconnect vpn.case.edu --authgroup Case -u nsg27"
 
 #python
 alias Spy="workon pymath && spyder3 --new-instance &"
