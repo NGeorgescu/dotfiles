@@ -1,3 +1,0 @@
-echo "password,NNNNNN"
-~/Dropbox/Files/Case\ Research/Bureaucracy/forticlientsslvpn/64bit/forticlientsslvpn_cli --server vpn2.case.edu:443 --vpnuser nsg27 --keepalive
-
