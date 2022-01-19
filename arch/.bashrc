@@ -125,7 +125,15 @@ PATH="$HOME/Dropbox/Files/i3cmds/:$PATH"
 [[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
 
 #base
-alias todo="vim ~/Dropbox/todo.txt; clear; cat ~/Dropbox/todo.txt"
+alias RAN="cd \"\$(dirname \"\$(fzf)\")\" && ranger"
+alias ram='ps axch -o cmd:15,%mem --sort=-%mem | head'
+alias cpu='ps axch -o cmd:15,%cpu --sort=-%cpu | head'
+alias ytdm='youtube-dl --extract-audio --audio-format mp3'
+alias ytdv='youtube-dl -f bestvideo+bestaudio'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
 
 #python
 alias Spy="workon math && nohup spyder --new-instance > /dev/null 2>&1 &"
