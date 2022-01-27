@@ -155,3 +155,4 @@ ttf-dejavu
 jhead
 perl-image-exiftool
 unclutter
+youtube-dl
