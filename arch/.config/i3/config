@@ -190,7 +190,8 @@ bindsym $mod+Escape exec i3lock --color=000000
 bindsym $mod+backslash gaps inner all plus 5
 bindsym $mod+Shift+backslash gaps inner all minus 5
 #bindsym $mod+[ exec $term -e ranger
-bindsym $mod+bracketright exec $term -e htop
+bindsym $mod+bracketright exec ~/Dropbox/Files/i3cmds/screen
+bindsym $mod+bracketleft exec $term -e htop
 bindsym $mod+Shift+bracketright move workspace to output next
 
 
