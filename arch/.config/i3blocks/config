@@ -28,6 +28,25 @@ command=~/.config/i3blocks/i3blocks/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
+#the all important one
+[arch]
+command=echo "$(lsb_release -sd | tr -d '"') $(uname -r)"
+interval=once
+
+# Mic indicator
+#
+# The first parameter sets the step (and units to display)
+# The second parameter overrides the mixer selection
+# See the script for details.
+[volume]
+label=MIC
+#label=♪
+#instance=Master
+instance=Capture
+interval=1
+signal=10
+
+
 # Volume indicator
 #
 # The first parameter sets the step (and units to display)
@@ -44,13 +63,14 @@ signal=10
 # Memory usage
 #
 # The type defaults to "mem" if the instance is not specified.
-[memory]
+[memfree]
 label=MEM
+instance=mem
 separator=false
 interval=30
 
-[memory]
-label=SWAP
+[memfree]
+label=SWP
 instance=swap
 separator=false
 interval=30
@@ -69,14 +89,15 @@ interval=30
 #
 # If the instance is not specified, use the interface used for default route.
 # The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
-[iface]
+#[iface]
 #instance=wlan0
-color=#00FF00
-interval=10
-separator=false
+#color=#00FF00
+#interval=10
+#separator=false
 
 [wifi]
-#instance=wlp3s0
+label=WIFI
+instance=wlp1s0
 interval=10
 separator=false
 

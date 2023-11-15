@@ -128,8 +128,12 @@ PATH="$HOME/Dropbox/Files/i3cmds/:$PATH"
 alias RAN="cd \"\$(dirname \"\$(fzf)\")\" && ranger"
 alias ram='ps axch -o cmd:15,%mem --sort=-%mem | head'
 alias cpu='ps axch -o cmd:15,%cpu --sort=-%cpu | head'
-alias ytdm='youtube-dl --extract-audio --audio-format mp3'
-alias ytdv='youtube-dl -f bestvideo+bestaudio'
+#alias ytdm='youtube-dl --extract-audio --audio-format mp3'
+#alias ytdv='youtube-dl -f bestvideo+bestaudio'
+alias ytdm='yt-dlp --extract-audio --audio-format mp3'
+alias ytdv='yt-dlp -f bestvideo+bestaudio'
+alias yaytrash="paccache -r && yay -Sac --noconfirm"
+
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -140,6 +144,9 @@ alias Spy="workon math && nohup spyder --new-instance > /dev/null 2>&1 &"
 alias Jup="workon math && nohup jupyter notebook > /dev/null 2>&1 &"
 
 #dotfiles
-alias Dot="cd ~/Dropbox/Files/Git/dotfiles/dotfiles"
-alias Rom="cd ~/Dropbox/Apps/Installs/Installers/Roms"
+#alias Dot="cd ~/Dropbox/Files/Git/dotfiles/dotfiles"
+#alias Rom="cd ~/Dropbox/Apps/Installs/Installers/Roms"
 alias Wii="sudo wminput -c /etc/cwiid/wminput/gamepad"
+
+
+
