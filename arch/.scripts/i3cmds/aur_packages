@@ -1,1 +1,0 @@
-for x in `pacman -Qme`; do yay -Ss "$x" | grep 'aur/'; done | grep 'Installed'

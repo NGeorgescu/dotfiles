@@ -1,6 +1,0 @@
-cat "$1" | while read line
-do
-  todoist add -N Checklist -d today "$line"
-done
-
-todoist sync
