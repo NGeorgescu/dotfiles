@@ -78,5 +78,5 @@ xorg
 xorg-server
 xorg-xfontsel
 xorg-xinit
-youtube-dl
+yt-dlp
 z
