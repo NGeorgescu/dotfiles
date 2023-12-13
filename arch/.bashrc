@@ -115,9 +115,11 @@ export HISTFILE=~/.bash_eternal_history
 # http://superuser.com/questions/20900/bash-history-loss
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
-
+export BUNDLE_PATH=~/.gems
 export WORKON_HOME=~/.virtualenvs
 source /usr/bin/virtualenvwrapper.sh
+[[ -f ~/.virtualenvs/math/bin/activate ]] && source ~/.virtualenvs/math/bin/activate
+
 
 PATH="$HOME/.local/bin:$PATH"
 PATH="$HOME/Dropbox/Files/i3cmds/:$PATH"
@@ -128,25 +130,54 @@ PATH="$HOME/Dropbox/Files/i3cmds/:$PATH"
 alias RAN="cd \"\$(dirname \"\$(fzf)\")\" && ranger"
 alias ram='ps axch -o cmd:15,%mem --sort=-%mem | head'
 alias cpu='ps axch -o cmd:15,%cpu --sort=-%cpu | head'
-#alias ytdm='youtube-dl --extract-audio --audio-format mp3'
-#alias ytdv='youtube-dl -f bestvideo+bestaudio'
 alias ytdm='yt-dlp --extract-audio --audio-format mp3'
 alias ytdv='yt-dlp -f bestvideo+bestaudio'
-alias yaytrash="paccache -r && yay -Sac --noconfirm"
-
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-
 
 #python
 alias Spy="workon math && nohup spyder --new-instance > /dev/null 2>&1 &"
 alias Jup="workon math && nohup jupyter notebook > /dev/null 2>&1 &"
 
 #dotfiles
-#alias Dot="cd ~/Dropbox/Files/Git/dotfiles/dotfiles"
-#alias Rom="cd ~/Dropbox/Apps/Installs/Installers/Roms"
 alias Wii="sudo wminput -c /etc/cwiid/wminput/gamepad"
+alias yaytrash="paccache -r && yay -Sac --noconfirm"
+
+# JINA_CLI_BEGIN
+
+## autocomplete
+_jina() {
+  COMPREPLY=()
+  local word="${COMP_WORDS[COMP_CWORD]}"
+
+  if [ "$COMP_CWORD" -eq 1 ]; then
+    COMPREPLY=( $(compgen -W "$(jina commands)" -- "$word") )
+  else
+    local words=("${COMP_WORDS[@]}")
+    unset words[0]
+    unset words[$COMP_CWORD]
+    local completions=$(jina completions "${words[@]}")
+    COMPREPLY=( $(compgen -W "$completions" -- "$word") )
+  fi
+}
+
+complete -F _jina jina
+
+# session-wise fix
+ulimit -n 4096
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+# default workspace for Executors
+
+# JINA_CLI_END
+
+
+
+
+
+
+
+
 
 
 

@@ -200,9 +200,10 @@ bindsym $mod+bracketright exec ~/Dropbox/Files/i3cmds/screen
 bindsym $mod+bracketleft exec $term -e htop
 bindsym $mod+Shift+bracketright move workspace to output next
 
+bindsym $mod+space exec dmenu_run
+bindsym $mod+Shift+space exec i3-dmenu-desktop
 
 # Exec hotkeys
-bindsym $mod+Shift+space floating toggle
 #bindsym $mod+q
 bindsym $mod+Shift+q kill
 bindsym $mod+w layout tabbed
@@ -219,21 +220,23 @@ bindsym $mod+Shift+p exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/P
 bindsym $mod+$alt+p exec "xdg-open http://localhost:631/"
 bindsym $mod+$alt+Shift+p exec simple-scan
 
+
 bindsym $mod+a focus parent
 bindsym $mod+Shift+a focus child
 bindsym $mod+s exec dmenuunicode
 bindsym $mod+Shift+s exec gnome-characters
-bindsym $mod+d exec dmenu_run
-bindsym $mod+Shift+d exec i3-dmenu-desktop
+bindsym $mod+d floating toggle
+bindsym $mod+Shift+d exec diodon
 bindsym $mod+f fullscreen toggle
 bindsym $mod+Shift+f focus mode_toggle
-bindsym $mod+g exec mailspring 
+bindsym $mod+g exec evolution 
 bindsym $mod+Shift+g exec gedit -s
 
 bindsym $mod+c exec virtualbox
 bindsym $mod+Shift+c exec $term -e python3
 bindsym $mod+v split v
 bindsym $mod+Shift+v split h
+#bindsym $mod+$alt+v diodon
 bindsym $mod+b exec arandr
 bindsym $mod+Shift+b exec pavucontrol
 bindsym $mod+n exec rhythmbox
