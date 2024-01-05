@@ -213,7 +213,8 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 bindsym $mod+r mode "resize"
 bindsym $mod+Shift+r restart
 bindsym $mod+t exec todoist
-bindsym $mod+Shift+t exec teams --disable-seccomp-filter-sandbox
+# bindsym $mod+Shift+t exec teams --disable-seccomp-filter-sandbox
+bindsym $mod+Shift+t exec teams-for-linux
 bindsym $mod+$alt+t exec discord
 bindsym $mod+p exec scrot -u '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
 bindsym $mod+Shift+p exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
@@ -225,8 +226,8 @@ bindsym $mod+a focus parent
 bindsym $mod+Shift+a focus child
 bindsym $mod+s exec dmenuunicode
 bindsym $mod+Shift+s exec gnome-characters
-bindsym $mod+d floating toggle
-bindsym $mod+Shift+d exec diodon
+bindsym $mod+d exec diodon
+bindsym $mod+Shift+d floating toggle
 bindsym $mod+f fullscreen toggle
 bindsym $mod+Shift+f focus mode_toggle
 bindsym $mod+g exec evolution 
@@ -242,6 +243,7 @@ bindsym $mod+Shift+b exec pavucontrol
 bindsym $mod+n exec rhythmbox
 bindsym $mod+Shift+n exec nautilus -w
 bindsym $mod+m exec firefox
+bindsym $mod+$alt+m exec chromium
 bindsym $mod+Shift+m exec $term -e nmtui
 
 #bindsym $mod+t exec chromium --profile-directory=Default --app-id=bgjohebimpjdhhocbknplfelpmdhifhd
