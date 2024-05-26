@@ -1,4 +1,29 @@
-#annoy
+#%% base
+selenium
+sympy
+seaborn
+openpyxl
+
+#%% editor
+pipdeptree
+flake8
+spyder-terminal
+jupyter
+jupyter-contrib-nbextensions
+# jupyterthemes
+
+#%% utilities
+yt-dlp
+multiprocess
+joblib
+dateparser
+fuzzywuzzy
+python-Levenshtein
+tabulate
+truecase
+webcolors
+
+#%% azure
 azure-ai-textanalytics
 azure-ai-translation-text
 azure-cognitiveservices-speech
@@ -7,91 +32,85 @@ azure-functions
 azure-identity
 azure-keyvault-secrets
 azure-storage-blob
-#blinker
-#chemify
-#cx-Oracle
+
+#%% app
+# Flask
+# Flask-Login
+# Flask-Session
+# Flask-SQLAlchemy
 dash-vtk
-dateparser
-#deep-translator
-#dlib
-#docx
-#extended
-extract-msg
-feedparser
-flake8
-#Flask-Login
-#Flask-Session
-#Flask-SQLAlchemy
-#fqdn
-fuzzywuzzy
-httptools
-#ibm-db
-#isoduration
-jams
-jsonpointer
-jupyter
-jupyter-contrib-nbextensions
-jupyterthemes
-langchain-serve
-langid
-librosa
-linkify-it-py
+plotly-express
 markdown2
-#mdit-py-plugins
-#moviepy
-multiprocess
-mvgavg
-mysql
-mysql-connector
+
+#%% connector
+pyodbc
+# cx-Oracle
+# ibm-db
+# mysql
+# mysql-connector
+pymongo
+pyspark
+
+#%% nlp
+# langchain-serve
+# annoy
+tiktoken
+# deep-translator
 nlu
-ocrmypdf
+# spacy-langdetect
+# SpeechRecognition
+sentence-transformers
+langid
+textblob
+
+#%% documents
+feedparser
+xmltodict
+tldextract
+httptools
+# blinker
+# dlib
 opencv-python
-openpyxl
+pytesseract
 pdf2image
 pdfminer
 pdfplumber
-pip
-pipdeptree
-plotly-express
-pocketsphinx
-pydocstyle
-pydub
-pymongo
 PyMuPDF
-pyodbc
+# vsdx
+# docx
+python-docx
+python-pptx
+pydocstyle
+xlutils
+extract-msg
+ocrmypdf
 PyPDF2
 PyPDF4
+
+#%% misc
 pyperclip
-PySocks
-pyspark
-pytesseract
-python-docx
-python-Levenshtein
-python-pptx
-rel
-resampy
-rope
-selenium
-sentence-transformers
-#spacy-langdetect
-SpeechRecognition
-spyder-terminal
-sympy
-tabulate
-tensorflow-cpu
-textblob
-tiktoken
-tldextract
-truecase
+# moviepy
 uri-template
 vamp
-#vsdx
 watchfiles
-webcolors
-whatthepatch
-xlutils
-xmltodict
 yapf
-ydata-profiling
+# resampy
+# fqdn
+# librosa
+# mdit-py-plugins
+# PySocks
+# pydub
+# ydata-profiling
+# whatthepatch
+# pocketsphinx
+# linkify-it-py
+# jams
+# rel
+# rope
+# jsonpointer
+# isoduration
+# chemify
+# extended
+mvgavg
 yfinance
-yt-dlp
+
