@@ -1,3 +1,3 @@
 #!/bin/bash
-yay -S $(cat packages.txt)
-
+yay -Syu --needed $(cat packages.txt)
+yay -Rnsc xdg-desktop-portal-gnome

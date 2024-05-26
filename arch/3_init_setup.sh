@@ -1,1 +1,2 @@
-sudo systemctl enable --now gdm timesync docker ufw mpd
+sudo systemctl enable --now gdm systemd-timesyncd ufw mpd
+# docker

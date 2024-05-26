@@ -197,9 +197,9 @@ bindsym $mod+backslash gaps inner all plus 5
 bindsym $mod+Shift+backslash gaps inner all minus 5
 #bindsym $mod+[ exec $term -e ranger
 bindsym $mod+bracketright exec ~/Dropbox/Files/i3cmds/screen
-bindsym $mod+bracketleft exec $term -e htop
 bindsym $mod+Shift+bracketright move workspace to output next
-
+bindsym $mod+bracketleft exec $term -e htop
+bindsym $mod+Shift+bracketleft exec "xdg-open http://localhost:631/"
 bindsym $mod+space exec dmenu_run
 bindsym $mod+Shift+space exec i3-dmenu-desktop
 
@@ -213,20 +213,21 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 bindsym $mod+r mode "resize"
 bindsym $mod+Shift+r restart
 bindsym $mod+t exec todoist
-# bindsym $mod+Shift+t exec teams --disable-seccomp-filter-sandbox
 bindsym $mod+Shift+t exec teams-for-linux
+# bindsym $mod+Shift+t exec teams --disable-seccomp-filter-sandbox
 bindsym $mod+$alt+t exec discord
 bindsym $mod+p exec scrot -u '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
 bindsym $mod+Shift+p exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
-bindsym $mod+$alt+p exec "xdg-open http://localhost:631/"
-bindsym $mod+$alt+Shift+p exec simple-scan
+bindsym $mod+$alt+p exec scrot --select '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
+bindsym $mod+$alt+Shift+p exec scrot --select '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
 
 
 bindsym $mod+a focus parent
 bindsym $mod+Shift+a focus child
 bindsym $mod+s exec dmenuunicode
 bindsym $mod+Shift+s exec gnome-characters
-bindsym $mod+d exec diodon
+bindsym $mod+$alt+s exec simple-scan
+bindsym $mod+d exec clipcat-menu
 bindsym $mod+Shift+d floating toggle
 bindsym $mod+f fullscreen toggle
 bindsym $mod+Shift+f focus mode_toggle
@@ -237,7 +238,6 @@ bindsym $mod+c exec virtualbox
 bindsym $mod+Shift+c exec $term -e python3
 bindsym $mod+v split v
 bindsym $mod+Shift+v split h
-#bindsym $mod+$alt+v diodon
 bindsym $mod+b exec arandr
 bindsym $mod+Shift+b exec pavucontrol
 bindsym $mod+n exec rhythmbox
@@ -245,6 +245,9 @@ bindsym $mod+Shift+n exec nautilus -w
 bindsym $mod+m exec firefox
 bindsym $mod+$alt+m exec chromium
 bindsym $mod+Shift+m exec $term -e nmtui
+bindsym $mod+$alt+slash exec --no-startup-id "bash -c 'source ~/.virtualenvs/math/bin/activate && killall busylight 2>/dev/null; busylight rainbow & disown'"
+bindsym $mod+$alt+period exec --no-startup-id "bash -c 'source ~/.virtualenvs/math/bin/activate && killall busylight 2>/dev/null; busylight on red & disown'"
+bindsym $mod+$alt+comma exec --no-startup-id "bash -c 'source ~/.virtualenvs/math/bin/activate && killall busylight 2>/dev/null; busylight on green & disown'"
 
 #bindsym $mod+t exec chromium --profile-directory=Default --app-id=bgjohebimpjdhhocbknplfelpmdhifhd
 
@@ -252,11 +255,13 @@ bindsym $mod+Shift+m exec $term -e nmtui
 # startup
 exec --no-startup-id fehbg
 exec --no-startup-id dropbox start
-exec --no-startup-id diodon
+# exec --no-startup-id diodon
+exec --no-startup-id clipcatd
 exec --no-startup-id dunst
 exec --no-startup-id unclutter
-exec --no-startup-id synclient VertScrollDelta=-50
-#exec --no-startup-id synclient VertScrollDelta=-50 MaxTapTime=0
+exec --no-startup-id xinput set-prop "DELL0A6A:00 0488:120A Touchpad" "libinput Natural Scrolling Enabled" 1
+# exec --no-startup-id synclient VertScrollDelta=-50
+# exec --no-startup-id synclient VertScrollDelta=-50 MaxTapTime=0
 exec --no-startup-id picom --config ~/.config/compton.conf -b
 exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
 

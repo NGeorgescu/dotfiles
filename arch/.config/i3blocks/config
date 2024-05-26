@@ -33,6 +33,11 @@ markup=none
 command=echo "$(lsb_release -sd | tr -d '"') $(uname -r)"
 interval=once
 
+#time since last update 
+[update]
+command=awk '/\[PACMAN\] starting full system upgrade/{flag=1; line=$0; next} /transaction completed/ && flag {print line; flag=0}' /var/log/pacman.log | tail -1 | grep -oP '^\[\K[^\]]+' | xargs -I {} bash -c 'echo "UPG$(( ($(date +%s) - $(date +%s -d "{}")) / 86400 ))D"'
+interval=60
+
 # Mic indicator
 #
 # The first parameter sets the step (and units to display)
