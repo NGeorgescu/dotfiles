@@ -118,7 +118,7 @@ PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 export BUNDLE_PATH=~/.gems
 export WORKON_HOME=~/.virtualenvs
 source /usr/bin/virtualenvwrapper.sh
-[[ -f ~/.virtualenvs/math/bin/activate ]] && source ~/.virtualenvs/math/bin/activate
+alias math="[[ -f ~/.virtualenvs/math/bin/activate ]] && source ~/.virtualenvs/math/bin/activate"
 
 
 PATH="$HOME/.local/bin:$PATH"
@@ -170,6 +170,22 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 # default workspace for Executors
 
 # JINA_CLI_END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
