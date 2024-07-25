@@ -2,8 +2,12 @@ acpi
 alsa-utils
 arandr
 ardour
+audacity
+azure-cli
 base
 base-devel
+bluez
+blueman
 chromium
 cups
 discord
@@ -20,11 +24,15 @@ freecad
 fzf
 geckodriver
 gedit
+gimp
 git
 gnome-keyring
 gnome-terminal
+gnome-themes-extra
 go
 gpaste
+hunspell
+hunspell-en_us
 hplip
 htop
 i3blocks
@@ -52,6 +60,7 @@ noto-fonts-extra
 ntfs-3g
 ntp
 nvidia-settings
+obs-studio
 obsidian
 okular
 openssl
@@ -59,8 +68,8 @@ pacman-contrib
 pamixer
 pavucontrol
 pdftricks
-pulsemixer
 pluma
+pulsemixer
 pypy3
 python-pip
 python-virtualenvwrapper
@@ -74,6 +83,9 @@ sysstat
 system-config-printer
 tesseract
 tesseract-data-eng
+texlive
+texlive-most
+transmission-gtk
 trash-cli
 tree
 ttf-dejavu
@@ -99,5 +111,7 @@ xorg-server
 xorg-xdpyinfo
 xorg-xinput
 xorg-xkill
+xterm
 yt-dlp
 z
+zettlr
