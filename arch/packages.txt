@@ -24,6 +24,7 @@ git
 gnome-keyring
 gnome-terminal
 go
+gpaste
 hplip
 htop
 i3blocks
@@ -43,6 +44,7 @@ mplayer
 nautilus
 neofetch
 networkmanager
+nerd-fonts
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
@@ -58,6 +60,7 @@ pamixer
 pavucontrol
 pdftricks
 pulsemixer
+pluma
 pypy3
 python-pip
 python-virtualenvwrapper
@@ -69,6 +72,8 @@ shotwell
 sudo
 sysstat
 system-config-printer
+tesseract
+tesseract-data-eng
 trash-cli
 tree
 ttf-dejavu
@@ -81,6 +86,7 @@ unclutter
 unpaper
 usbutils
 vim
+vim-plugins
 virtualbox
 virtualbox-guest-iso
 virtualbox-guest-utils

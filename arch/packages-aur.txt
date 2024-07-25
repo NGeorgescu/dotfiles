@@ -4,7 +4,7 @@ azuredatastudio-bin
 cura-bin
 debtap
 deskew
-diodon
+docker-desktop
 downgrade
 dropbox
 golfscript
