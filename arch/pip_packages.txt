@@ -22,6 +22,8 @@ python-Levenshtein
 tabulate
 truecase
 webcolors
+busylight-for-humans
+fake-useragent
 
 #%% azure
 azure-ai-textanalytics
@@ -86,6 +88,9 @@ extract-msg
 ocrmypdf
 PyPDF2
 PyPDF4
+readability-lxml
+html2text
+lxml[html_clean]
 
 #%% misc
 pyperclip
